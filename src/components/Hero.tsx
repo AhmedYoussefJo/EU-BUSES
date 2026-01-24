@@ -5,6 +5,7 @@ import { ArrowRight, Info, Facebook, Instagram, Linkedin, X, Phone } from "lucid
 import Link from "next/link";
 import { useState } from "react";
 import NetworkAnimation from "./NetworkAnimation";
+import { prefix } from "@/utils/prefix";
 
 export default function Hero() {
   const [showSocials, setShowSocials] = useState(false);
@@ -48,7 +49,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 z-0 bg-[30%_center] md:bg-center bg-cover bg-no-repeat"
         style={{
-          backgroundImage: "url('/banner.PNG')",
+          backgroundImage: `url('${prefix}/banner.PNG')`,
         }}
       >
         <div className="absolute inset-0 bg-black/60" />

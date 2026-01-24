@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { User, Code2, ShieldCheck, Database, Laptop, Bot } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import { prefix } from "@/utils/prefix";
 
 const teamData = [
   {
     name: { en: "Mohamed Ramadan", ar: "محمد رمضان" },
     role: { en: "Founder & CEO", ar: "المؤسس والرئيس التنفيذي" },
-    image: "/mohamed.jpeg",
+    image: `${prefix}/mohamed.jpeg`,
     bio: { 
       en: "Mechatronics Technology student. Founder of EU-BUS with a vision to transform student transportation through technology.",
       ar: "طالب تكنولوجيا الميكاترونكس. مؤسس EU-BUS برؤية لتحويل نقل الطلاب من خلال التكنولوجيا."
@@ -19,7 +20,7 @@ const teamData = [
   {
     name: { en: "Ahmed Yousef", ar: "أحمد يوسف" },
     role: { en: "Data Analyst | Web Developer", ar: "محلل بيانات | مطور ويب" },
-    image: "/Ahmed.jpg",
+    image: `${prefix}/Ahmed.jpg`,
     bio: {
       en: "Specialized in data analysis and web development, focusing on building efficient data-driven solutions.",
       ar: "متخصص في تحليل البيانات وتطوير الويب، مع التركيز على بناء حلول فعالة تعتمد على البيانات."
@@ -29,7 +30,7 @@ const teamData = [
     {
     name: { en: "Gamal Abdelnasser", ar: "جمال عبد الناصر" },
     role: { en: "Mobile App & AI Specialist", ar: "أخصائي تطبيقات الهاتف والذكاء الاصطناعي" },
-    image: "/gamal.jpeg",
+    image: `${prefix}/gamal.jpeg`,
     bio: {
       en: "Flutter expert & AI automation (n8n) specialist. Experienced in 'Vibe Coding' and AI-powered ERP systems with Clean Architecture.",
       ar: "خبير Flutter ومتخصص في أتمتة الذكاء الاصطناعي (n8n). خبرة في 'Vibe Coding' وأنظمة ERP المدعومة بالذكاء الاصطناعي."
@@ -39,7 +40,7 @@ const teamData = [
   {
     name: { en: "Kareem Mohamed", ar: "كريم محمد" },
     role: { en: "Network & Security Specialist", ar: "أخصائي الشبكات والأمن السيبراني" },
-    image: "/kareem.jpeg",
+    image: `${prefix}/kareem.jpeg`,
     bio: {
       en: "Ensuring the security and stability of our network infrastructure and protecting user data.",
       ar: "ضمان أمن واستقرار البنية التحتية لشبكتنا وحماية بيانات المستخدمين."
@@ -49,7 +50,7 @@ const teamData = [
   {
     name: { en: "Mahmoud Mohamed", ar: "محمود محمد" },
     role: { en: "System Admin | Backend Dev", ar: "مسؤول النظام | مطور خلفية" },
-    image: "/mahmoud.jpeg",
+    image: `${prefix}/mahmoud.jpeg`,
     bio: {
       en: "System Administrator and ASP.Net Backend Developer responsible for server architecture and stability.",
       ar: "مسؤول النظام ومطور Backend ASP.Net مسؤول عن بنية الخادم واستقراره."
@@ -59,7 +60,7 @@ const teamData = [
   {
     name: { en: "Omar Essam", ar: "عمر عصام" },
     role: { en: "Network Admin & Security", ar: "مسؤول شبكات وأمن معلومات" },
-    image: "/omar.jpeg",
+    image: `${prefix}/omar.jpeg`,
     bio: {
       en: "Networking and Network Security specialist with a strong background in Database management.",
       ar: "متخصص في الشبكات وأمن المعلومات، ويمتلك خلفية قوية في إدارة قواعد البيانات."
