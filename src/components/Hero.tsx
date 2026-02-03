@@ -44,15 +44,15 @@ export default function Hero() {
   ];
 
   return (
-    <div className="relative h-[100vh] w-full flex items-center justify-center overflow-hidden">
+    <div className="relative h-[100vh] w-full flex items-center justify-center overflow-hidden bg-gray-50 dark:bg-zinc-900 transition-colors duration-500">
       {/* Background Image with Overlay */}
       <div 
-        className="absolute inset-0 z-0 bg-[30%_center] md:bg-center bg-cover bg-no-repeat"
+        className="absolute inset-0 z-0 bg-[30%_center] md:bg-center bg-cover bg-no-repeat transition-opacity duration-500"
         style={{
           backgroundImage: `url('${prefix}/banner.PNG')`,
         }}
       >
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-white/0 dark:bg-black/60 transition-colors duration-500" />
         <NetworkAnimation variant="mixed" />
       </div>
 
@@ -62,13 +62,13 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">
             EU-BUS
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-200 mb-8 max-w-2xl mx-auto transition-colors duration-300">
             Your Safe Journey to Success
             <br />
-            <span className="text-lg text-gray-300 mt-2 block font-arabic">
+            <span className="text-lg text-gray-600 dark:text-gray-300 mt-2 block font-arabic transition-colors duration-300">
               رحلتك الآمنة نحو النجاح
             </span>
           </p>
@@ -78,7 +78,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setShowSocials(true)}
-              className="px-8 py-3 bg-blue-600 text-white rounded-full font-semibold flex items-center gap-2 hover:bg-blue-500 transition-colors cursor-pointer"
+              className="px-8 py-3 bg-blue-600 text-white rounded-full font-semibold flex items-center gap-2 hover:bg-blue-500 transition-colors cursor-pointer shadow-lg"
             >
               <Info className="w-5 h-5" />
               About Us
@@ -88,7 +88,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setShowComingSoon(true)}
-              className="px-8 py-3 bg-white/10 backdrop-blur-sm text-white border border-white/30 rounded-full font-semibold flex items-center gap-2 hover:bg-white/20 transition-colors"
+              className="px-8 py-3 bg-white dark:bg-white/10 text-gray-900 dark:text-white border border-gray-200 dark:border-white/30 rounded-full font-semibold flex items-center gap-2 hover:bg-gray-50 dark:hover:bg-white/20 transition-colors shadow-lg backdrop-blur-sm"
             >
               Start Journey
               <ArrowRight className="w-5 h-5" />
@@ -103,27 +103,27 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-md p-4 transition-colors duration-300"
             onClick={() => setShowComingSoon(false)}
           >
             <motion.div
               initial={{ scale: 0.8, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.8, opacity: 0, y: 20 }}
-              className="relative p-8 text-center"
+              className="relative p-8 text-center bg-white dark:bg-zinc-900 rounded-2xl shadow-2xl border border-gray-100 dark:border-zinc-800 transition-colors duration-300"
               onClick={(e) => e.stopPropagation()}
             >
               <button 
                 onClick={() => setShowComingSoon(false)}
-                className="absolute -top-12 right-0 text-white/50 hover:text-white transition-colors"
+                className="absolute -top-12 right-0 text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors"
               >
                 <X className="w-8 h-8" />
               </button>
               
-              <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tighter">
+              <h2 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4 tracking-tighter transition-colors duration-300">
                 Coming Soon!
               </h2>
-              <p className="text-blue-400 text-lg md:text-xl font-medium">
+              <p className="text-blue-600 dark:text-blue-400 text-lg md:text-xl font-medium transition-colors duration-300">
                 Our journey is about to begin...
               </p>
             </motion.div>
@@ -137,19 +137,19 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xl p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-white/90 dark:bg-black/60 backdrop-blur-xl p-4 transition-colors duration-300"
             onClick={() => setShowSocials(false)}
           >
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
-              className="relative p-12"
+              className="relative p-12 bg-white dark:bg-zinc-900 rounded-3xl shadow-2xl border border-gray-100 dark:border-zinc-800 transition-colors duration-300"
               onClick={(e) => e.stopPropagation()}
             >
               <button 
                 onClick={() => setShowSocials(false)}
-                className="absolute -top-12 right-0 text-white/50 hover:text-white transition-colors"
+                className="absolute -top-12 right-0 text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors"
               >
                 <X className="w-8 h-8" />
               </button>
